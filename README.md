@@ -6,7 +6,7 @@
 DUP 0 < 2 * 1 + *
 ```
 
-Step-by-step stack if positive:
+Step-by-step stack, starting with 13:
 ```
 13
 13 13
@@ -19,7 +19,7 @@ Step-by-step stack if positive:
 13
 ```
 
-Step-by-step stack if negative:
+Step-by-step stack, starting with -13:
 ```
 -13
 -13 -13
