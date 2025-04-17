@@ -1,6 +1,5 @@
 #!/bin/bash
 # chmod +x ./lforth.sh 
-# shake hands with danger
 
 ValStack=() # value stack
 LineStack=() # line stack
@@ -438,34 +437,7 @@ LineStack+=("a,b,c , SPLIT : 3 JOIN PRINT")
 LineStack+=("ab DUP PRINT occurs PRINT acbbabcbcbaabbcb DUP 2 SWAP OCCUR PRINT \"\" times in \"\" trim PRINT PRINT")
 LineStack+=('"" 0 DC DUP LEN 1 - DC "" trim !')
 
-# print "a message" 5 times, aka LOOP
-# LineStack+=('SELF')
-# LineStack+=('"" PMESS tI 0 DC DUP I 1 SWAP FORGET 1 - 1 SWAP ! tSELF 0 DC ? NADA I IFELSE "" TRIM SELF !')
-# LineStack+=('5 I !')
-# LineStack+=('DQ "" a message "" TRIM DQ "" "" 3 JOIN "" TRIM PRINT "" TRIM "" "" 2 JOIN PMESS !')
-# LineStack+=('"" " " NADA 2 JOIN "" DQ !')
-# LineStack+=('"" " " " " 0 DC "" 6 DC 2 DC 0 DC NADA !')
-# LineStack+=('"" 0 == -1 * SWAP POP LINE "" TRIM IFELSE !')
-# LineStack+=('"" 0 DC DUP LEN 1 - DC "" 0 DC DUP LEN 1 - DC TRIM !')
-
-# execute a CASE statement
-# LineStack+=('CASE')
-# LineStack+=('"" X ! 1 - N ! X SWAP C ! CLEAR "" TRIM CASE !')
-# LineStack+=('"" POP tCLEAR 0 DC tC 0 DC N 1 - tN 0 DC DUP FORGET ! N IFELSE "" CLEAR !')
-# LineStack+=('4 1')
-# LineStack+=('"" DD "" TRIM DQQ')
-# LineStack+=('"" CC "" TRIM DQQ')
-# LineStack+=('"" BB "" TRIM DQQ')
-# LineStack+=('"" AA "" TRIM DQQ')
-# LineStack+=('"" DQ 1 SWAP DQ SPACE 3 JOIN tTRIM 0 DC tPRINT 0 DC SPACE 3 JOIN "" TRIM DQQ !')
-# LineStack+=('"" " " NADA 2 JOIN "" DQ !')
-# LineStack+=('"" " " " " "" 6 DC 2 DC SPACE !')
-# LineStack+=('"" " " " " 0 DC "" 6 DC 2 DC NADA !')
-# LineStack+=('"" 0 == -1 * SWAP POP LINE "" TRIM IFELSE !')
-# LineStack+=('"" 0 DC DUP LEN 1 - DC "" 0 DC DUP LEN 1 - DC TRIM !')
-
 run
 
-# debug 63 # all stacks
-# debug 7 # val, line, and head stack
+# debug 63 # everything
 debug 47
