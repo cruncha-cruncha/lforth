@@ -36,13 +36,14 @@ Step-by-step stack, starting with -13:
 `( a b n -- )`: If n == 0, then execute b. If n != 0, then execute a. First cleans up the stack such that a (or b) executes without \[a, b, or n\] on the stack. In summary:
 - if n == 0, swap a and b (aka swap 1), POP, LINE
 - if n != 0, swap b and b (aka swap 0), POP, LINE
+
 So we need an f(x) such that f(0) -> 1, and f(not 0) -> 0. This can be defined as f(x) = ((x == 0) * -1). All together:
 ```
 0 == -1 * SWAP POP LINE
 ```
 
 ## Naive CASE
-`( c1 c2 c3 c4 x -- )`: Execute xth case. This only works if the number of cases is known before runtime. Assuming c_ and x are already on the stack:
+`( c1 c2 c3 c4 x -- )`: Execute xth case. Number of cases must be known before runtime. Assuming c_ and x are already on the stack:
 ```
 SWAP 3 SWAP POP POP POP LINE
 ```
